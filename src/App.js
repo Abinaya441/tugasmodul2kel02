@@ -24,8 +24,8 @@ function App() {
         {
           data.filter(post => {
             if (kuery === '') {
-              return post;
-            } else if (post.nim.toString().includes(kuery.toString())) {
+              return null;
+            } else if (post.nim == kuery) {
               return post;
             }
           }).map((post) => (
